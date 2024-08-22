@@ -67,7 +67,7 @@ static void task2_handler(void *parameters);
   */
 int main(void)
 {
-int denemev2;
+int deneme;
   /* USER CODE BEGIN 1 */
 TaskHandle_t task1_handle;
 TaskHandle_t task2_handle;
