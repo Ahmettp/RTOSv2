@@ -1,0 +1,10 @@
+17:09:04 **** Incremental Build of configuration Debug for project seri_haberlesme_v1 ****
+make -j20 all 
+arm-none-eabi-size  seri_haberlesme_v1.elf 
+   text	   data	    bss	    dec	    hex	filename
+   5704	     12	   1644	   7360	   1cc0	seri_haberlesme_v1.elf
+Finished building: default.size.stdout
+ 
+
+17:09:04 Build Finished. 0 errors, 0 warnings. (took 139ms)
+
