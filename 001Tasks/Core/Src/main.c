@@ -23,6 +23,8 @@
 /* USER CODE BEGIN Includes */
 #include "FreeRTOS.h"
 #include "task.h"
+#include "stdlib.h"
+#include "stdio.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -67,7 +69,7 @@ static void task2_handler(void *parameters);
   */
 int main(void)
 {
-int deneme;
+
   /* USER CODE BEGIN 1 */
 TaskHandle_t task1_handle;
 TaskHandle_t task2_handle;
@@ -101,11 +103,11 @@ BaseType_t status;
 
   status = xTaskCreate(task2_handler, "Task-2", 200, "Hello world from task-2", 2, &task2_handle);
   configASSERT(status == pdPASS);
+	printf("Hebele \n");
+  vTaskStartScheduler();
 
 
-
-
-/* USER CODE END 2 */
+  /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
@@ -309,12 +311,18 @@ static void MX_GPIO_Init(void)
 /* USER CODE BEGIN 4 */
 static void task1_handler(void *parameters)
 {
-
+	while(1)
+	{
+		printf("%s\n",(char*)parameters);
+	}
 }
 
 static void task2_handler(void *parameters)
 {
-
+	while(1)
+	{
+		printf("%s\n",(char*)parameters);
+	}
 }
 
 
